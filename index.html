@@ -1,193 +1,189 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הנחיות הגעה למרפאות עיניים</title>
-    <style>
-        /* רקע כללי של הדף */
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            direction: rtl;
-            margin: 0;
-            padding: 20px;
-            /* תמונת רקע */
-            background: url("background.jpg") no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* רקע בהיר למכולות הטקסט, כדי שיהיה קריא על הרקע */
-        .white-box {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            padding: 15px;
-            width: 90%;
-            max-width: 600px;
-        }
-
-        h1 {
-            color: #333;
-            margin-top: 0;
-        }
-
-        .logo-container img {
-            width: 150px;
-            margin-bottom: 20px;
-        }
-
-        .instructions p {
-            margin: 5px 0;
-        }
-
-        /* עיצוב לתמונות השלבים */
-        .step-image {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .step-image:hover {
-            transform: scale(1.05);
-        }
-
-        /* עיצוב למודל (פופאפ) של התמונות */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הנחיות הגעה למרפאות עיניים</title>
+  <style>
+    /* מבטיחים שהגובה והרוחב יהיו 100% */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* הגדרת רקע מלא לדף */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      direction: rtl;
+      background: url("background.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    /* מכולות לבנות שקופות במקצת לקריאות */
+    .white-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      padding: 15px;
+      width: 90%;
+      max-width: 600px;
+    }
+    h1, h2 {
+      color: #333;
+      margin-top: 0;
+    }
+    .logo-container img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    .instructions p {
+      margin: 5px 0;
+    }
+    /* עיצוב התמונות לכל שלב */
+    .step-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .step-image:hover {
+      transform: scale(1.05);
+    }
+    /* עיצוב מודל (פופאפ) להצגת התמונות המוגדלות */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- לוגו למעלה -->
-    <div class="white-box logo-container">
-        <img src="logo.jpg" alt="לוגו הדסה">
+  <!-- לוגו למעלה -->
+  <div class="white-box logo-container">
+    <img src="logo.jpg" alt="לוגו הדסה">
+  </div>
+
+  <!-- כותרת והקדמה בשלוש שפות -->
+  <div class="white-box">
+    <h1>הנחיות הגעה למרפאות עיניים</h1>
+    <p>הנך מופנה למרפאות עיניים לצורך בדיקה. המרפאה נמצאת ב"בניין המרפאות" בקומה 0. אנא וודא כי לקחת את הגיליון הרפואי איתך.</p>
+    <p>You are referred to the ophthalmology clinics for an examination. The clinic is located in the "Clinics Building" on floor 0. Please make sure to bring your medical record with you.</p>
+    <p>تم توجيهك إلى عيادات العيون لإجراء فحص. تقع العيادة في "مبنى العيادات" في الطابق 0. يرجى التأكد من إحضار السجل الطبي الخاص بك.</p>
+  </div>
+
+  <!-- כותרת משנה -->
+  <div class="white-box">
+    <h2>על מנת להגיע למרפאה:</h2>
+  </div>
+
+  <!-- שלב 1 -->
+  <div class="white-box">
+    <div class="instructions">
+      <p>צא ימינה אל עבר רחבת ההמתנה של המיון</p>
+      <p>Exit right towards the emergency waiting area</p>
+      <p>اخرج إلى اليمين باتجاه منطقة الانتظار في الطوارئ</p>
     </div>
+    <img src="step1.jpg" alt="שלב 1" class="step-image" onclick="openModal(this)">
+  </div>
 
-    <!-- כותרת והקדמה בשלוש שפות -->
-    <div class="white-box">
-        <h1>הנחיות הגעה למרפאות עיניים</h1>
-        <p>הנך מופנה למרפאות עיניים לצורך בדיקה. המרפאה נמצאת ב"בניין המרפאות" בקומה 0. אנא וודא כי לקחת את הגיליון הרפואי איתך.</p>
-        <p>You are referred to the ophthalmology clinics for an examination. The clinic is located in the "Clinics Building" on floor 0. Please make sure to bring your medical record with you.</p>
-        <p>تم توجيهك إلى عيادات العيون لإجراء فحص. تقع العيادة في "مبنى العيادات" في الطابق 0. يرجى التأكد من إحضار السجل الطبي الخاص بك.</p>
+  <!-- שלב 2 -->
+  <div class="white-box">
+    <div class="instructions">
+      <p>פנה אל עבר היציאה מבניין המיון</p>
+      <p>Turn towards the exit of the emergency building</p>
+      <p>توجه نحو مخرج مبنى الطوارئ</p>
     </div>
+    <img src="step2.jpg" alt="שלב 2" class="step-image" onclick="openModal(this)">
+  </div>
 
-    <!-- כותרת משנה: על מנת להגיע למרפאה -->
-    <div class="white-box">
-        <h2>על מנת להגיע למרפאה:</h2>
+  <!-- שלב 3 -->
+  <div class="white-box">
+    <div class="instructions">
+      <p>צא אל רחבת האמבולנסים</p>
+      <p>Step into the ambulance area</p>
+      <p>ادخل إلى ساحة سيارات الإسعاف</p>
     </div>
+    <img src="step3.jpg" alt="שלב 3" class="step-image" onclick="openModal(this)">
+  </div>
 
-    <!-- שלב 1 -->
-    <div class="white-box">
-        <div class="instructions">
-            <p>צא ימינה אל עבר רחבת ההמתנה של המיון</p>
-            <p>Exit right towards the emergency waiting area</p>
-            <p>اخرج إلى اليمين باتجاه منطقة الانتظار في الطوارئ</p>
-        </div>
-        <img src="step1.jpg" alt="שלב 1" class="step-image" onclick="openModal(this)">
+  <!-- שלב 4 -->
+  <div class="white-box">
+    <div class="instructions">
+      <p>חצה את רחבת האמבולנסים לכניסה לבניין המרפאות</p>
+      <p>Cross the ambulance area to the entrance of the clinic building</p>
+      <p>اعبر ساحة سيارات الإسعاف للدخول إلى مبنى العيادات</p>
     </div>
+    <img src="step4.jpg" alt="שלב 4" class="step-image" onclick="openModal(this)">
+  </div>
 
-    <!-- שלב 2 -->
-    <div class="white-box">
-        <div class="instructions">
-            <p>פנה אל עבר היציאה מבניין המיון</p>
-            <p>Turn towards the exit of the emergency building</p>
-            <p>توجه نحو مخرج مبنى الطوارئ</p>
-        </div>
-        <img src="step2.jpg" alt="שלב 2" class="step-image" onclick="openModal(this)">
+  <!-- שלב 5 -->
+  <div class="white-box">
+    <div class="instructions">
+      <p>פנה שמאלה אל עבר המעליות</p>
+      <p>Turn left towards the elevators</p>
+      <p>انعطف يسارًا باتجاه المصاعد</p>
     </div>
+    <img src="step5.jpg" alt="שלב 5" class="step-image" onclick="openModal(this)">
+  </div>
 
-    <!-- שלב 3 -->
-    <div class="white-box">
-        <div class="instructions">
-            <p>צא אל רחבת האמבולנסים</p>
-            <p>Step into the ambulance area</p>
-            <p>ادخل إلى ساحة سيارات الإسعاف</p>
-        </div>
-        <img src="step3.jpg" alt="שלב 3" class="step-image" onclick="openModal(this)">
+  <!-- שלב 6 -->
+  <div class="white-box">
+    <div class="instructions">
+      <p>רד קומה אחת לקומה 0</p>
+      <p>Go down one floor to level 0</p>
+      <p>انزل طابقًا واحدًا إلى الطابق 0</p>
     </div>
+    <img src="step6.jpg" alt="שלב 6" class="step-image" onclick="openModal(this)">
+  </div>
 
-    <!-- שלב 4 -->
-    <div class="white-box">
-        <div class="instructions">
-            <p>חצה את רחבת האמבולנסים לכניסה לבניין המרפאות</p>
-            <p>Cross the ambulance area to the entrance of the clinic building</p>
-            <p>اعبر ساحة سيارات الإسعاف للدخول إلى مبنى العيادات</p>
-        </div>
-        <img src="step4.jpg" alt="שלב 4" class="step-image" onclick="openModal(this)">
+  <!-- שלב 7 -->
+  <div class="white-box">
+    <div class="instructions">
+      <p>צא מהמעלית ופנה אל עבר המרפאות</p>
+      <p>Exit the elevator towards the clinics</p>
+      <p>اخرج من المصعد باتجاه العيادات</p>
     </div>
+    <img src="step7.jpg" alt="שלב 7" class="step-image" onclick="openModal(this)">
+  </div>
 
-    <!-- שלב 5 -->
-    <div class="white-box">
-        <div class="instructions">
-            <p>פנה שמאלה אל עבר המעליות</p>
-            <p>Turn left towards the elevators</p>
-            <p>انعطف يسارًا باتجاه المصاعد</p>
-        </div>
-        <img src="step5.jpg" alt="שלב 5" class="step-image" onclick="openModal(this)">
-    </div>
+  <!-- מודל להצגת תמונות מוגדלות -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img id="modalImage" alt="תמונה מוגדלת">
+  </div>
 
-    <!-- שלב 6 -->
-    <div class="white-box">
-        <div class="instructions">
-            <p>רד קומה אחת לקומה 0</p>
-            <p>Go down one floor to level 0</p>
-            <p>انزل طابقًا واحدًا إلى الطابق 0</p>
-        </div>
-        <img src="step6.jpg" alt="שלב 6" class="step-image" onclick="openModal(this)">
-    </div>
-
-    <!-- שלב 7 -->
-    <div class="white-box">
-        <div class="instructions">
-            <p>צא מהמעלית ופנה אל עבר המרפאות</p>
-            <p>Exit the elevator towards the clinics</p>
-            <p>اخرج من المصعد باتجاه العيادات</p>
-        </div>
-        <img src="step7.jpg" alt="שלב 7" class="step-image" onclick="openModal(this)">
-    </div>
-
-    <!-- מודל להצגת תמונות מוגדלות -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="modal-close">&times;</span>
-        <img id="modalImage">
-    </div>
-
-    <script>
-        function openModal(img) {
-            document.getElementById("modalImage").src = img.src;
-            document.getElementById("imageModal").style.display = "flex";
-        }
-
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
-    </script>
+  <script>
+    function openModal(img) {
+      document.getElementById("modalImage").src = img.src;
+      document.getElementById("imageModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
